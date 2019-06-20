@@ -1,4 +1,4 @@
-@import "../../node_modules/normalize.css/normalize.css"; 
+@import "../../node_modules/normalize.css/normalize.css";
 
 * {
   box-sizing: border-box;
@@ -7,20 +7,34 @@
 section {
   margin: auto;
   overflow: hidden;
+  height: 100%;
 }
 
-body {
-  font-family: 'Cardo', serif;
- }
- 
- h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
- }
+html,
+body,
+#app,
+#app > div {
+  font-family: "Cardo", serif;
+  height: 100%;
+}
 
-.group:after {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.cf:before,
+.cf:after {
   content: "";
   display: table;
+  line-height: 0;
+}
+.cf:after {
   clear: both;
 }
 
@@ -54,7 +68,7 @@ body {
 .credentials a {
   text-decoration: none;
   font-size: 25px;
-  color: #c0ccd4; 
+  color: #c0ccd4;
   z-index: 2;
 }
 
@@ -92,12 +106,13 @@ body {
   text-align: center;
 }
 
-.core-assist-container  .box {
+.core-assist-container .box {
   padding: 2.5% 5%;
   width: 70%;
 }
 
-.far, .fas {
+.far,
+.fas {
   padding-top: 10px;
   font-size: 50px;
   color: #ffce00;
@@ -116,10 +131,13 @@ body {
   padding: 15px;
 }
 
-.booking-form p, label, input, textarea {
+.booking-form p,
+label,
+input,
+textarea {
   height: 50px;
   width: 100%;
-  outline:none;
+  outline: none;
 }
 
 .booking-form input {
@@ -150,7 +168,7 @@ body {
 .booking-form .message-label {
   color: #c0ccd4;
 }
-  
+
 .booking-form span {
   padding: 10px;
   pointer-events: none;
@@ -163,7 +181,8 @@ body {
   opacity: 0.5;
 }
 
-input:focus + span, input:not(:placeholder-shown) + span {
+input:focus + span,
+input:not(:placeholder-shown) + span {
   opacity: 1;
   transform: scale(0.75) translateY(-100%) translateX(-30px);
   color: #c0ccd4;
@@ -194,14 +213,15 @@ button:focus {
   outline: none;
 }
 
-.required:after { 
-  content:" *"; 
+.required:after {
+  content: " *";
   color: red;
 }
 
 .site-footer {
   font-size: 14px;
   text-align: center;
+  max-height: 75px;
   padding: 10px 5%;
   background-color: #484d5c;
   color: #c0ccd4;
@@ -209,6 +229,7 @@ button:focus {
 
 .main-content {
   position: relative;
+  min-height: calc(100% - 64px);
   padding-top: 125px;
 }
 
@@ -219,19 +240,18 @@ button:focus {
   width: 100%;
   max-height: 125px;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: space-between;
   background-color: #484d5c;
   color: #ffce00;
-  padding: 10px 2%;
+  padding: 10px 0px;
   z-index: 5;
   box-shadow: 0px 2px 4px #555555;
 }
 
 .site-title {
-  margin: 0px; 
   font-size: 30px;
-  padding-right: 250px;
+  margin-right: 300px;
 }
 
 .site-core-nav {
@@ -242,10 +262,10 @@ button:focus {
 
 /* Media Queries */
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .site-header,
   .main-nav,
-  .main-nav li, 
+  .main-nav li,
   .core-assist-container .box {
     float: none;
     text-align: center;
@@ -257,6 +277,4 @@ button:focus {
     display: block;
     text-align: center;
   }
-
-
 }

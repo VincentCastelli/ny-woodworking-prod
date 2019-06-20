@@ -6,3 +6,4 @@ node_modules
 
 ## Production
 dist/bundle.js
+productData.js

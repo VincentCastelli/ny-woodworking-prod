@@ -6,7 +6,7 @@ import Main from './Main';
 const App = () => {
   return (
     <div>
-      <header className="site-header group">
+      <header className="site-header cf">
         <div className="site-title">
           <h1>NY Woodworking</h1>
         </div>
@@ -29,10 +29,10 @@ const App = () => {
           </NavLink>
         </div>
       </header>
-      <main className="main-content">
+      <main className="main-content cf">
         <Main />
       </main>
-      <footer className="site-footer">
+      <footer className="site-footer cf">
         <p>
           NY Woodworking &copy; 2019
         </p>
